@@ -3,27 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coming Soon</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #111111;
-    }
-
-    h1 {
-      font-size: clamp(48px, 10vw, 120px);
-      font-weight: 800;
-      letter-spacing: -2px;
-    }
-  </style>
+  <title>Korean Exhibitor Directory</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Coming Soon</h1>
+
+<header class="hero">
+  <div class="hero-inner">
+        <span class="eyebrow">
+              AME 2026 × EV TREND KOREA 2026
+            </span>
+            <div class="hero-subtitle">
+              KITA 1:1 Business Matching Program
+            </div>
+            <h1>Exhibitor Directory</h1>
+
+    <div class="search-area">
+      <input type="text" id="searchInput" placeholder="Search by company, product, category..." />
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="filter-section">
+    <div id="categoryFilters" class="filter-wrap"></div>
+  </section>
+
+  <section class="result-info">
+    <p><span id="resultCount">0</span> companies found</p>
+  </section>
+
+  <section id="companyGrid" class="company-grid"></section>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
