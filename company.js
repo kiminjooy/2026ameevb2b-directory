@@ -23,14 +23,16 @@ function renderDetail(products) {
   const displaySource =
   first.source_sheet === "EV_디렉토리"
     ? "EV TREND KOREA 2026"
-    : "AME 2026";
+    : first.source_sheet === "AME_디렉토리"
+    ? "AME 2026"
+    : "";
 
   const detail = document.getElementById("companyDetail");
 
   detail.innerHTML = `
     <div class="detail-hero">
       <div class="detail-title-area">
-        <span class="category-badge">${displaySource}</span>
+        ${displaySource ? `<span class="category-badge">${displaySource}</span>` : ""}
         <h1>${first.company_en || first.company_ko}</h1>
 
         <div class="company-intro-inline">
